@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Rubik Mono One";
+  src: url("/types/Rubik_Mono_One/RubikMonoOne-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-rubik {
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+
+@font-face {
+    font-family: "Rosarivo";
+    src: url("/types/Rosarivo/Rosarivo-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-Rosarivo {
+    font-family: "Rosarivo", sans-serif;
+}
+
+@font-face {
+    font-family: "Roboto-medium";
+    src: url("/types/Roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-Roboto_medium {
+    font-family: "Roboto-medium", sans-serif;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/types/Roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-Roboto {
+    font-family: "Roboto", sans-serif;
+}

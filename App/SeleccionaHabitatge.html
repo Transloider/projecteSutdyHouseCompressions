@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sutdy House</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-cover bg-center" style="background-image: url('../App/img/ProjecteUF1StudyHouse.png');">
+    <header class="bg-green py-2 relative">
+        <div href="../App/MainMenu.html" class="w-full px-1 flex justify-between items-center">
+            <div onclick="window.location.href='../App/MainMenu.html'" class="flex items-center">
+                <!-- Logo -->
+                <div class="mr-2">
+                    <img src="./img/house-plants.png" alt="Sutdy House Logo"
+                        class="hidden sm:block h-12 w-12 sm:h-14 sm:w-14">
+                </div>
+                <!-- Title -->
+                <h1 class="text-3xl sm:text-4xl font-bold text-black font-rubik">SUTDY HOUSE</h1>
+            </div>
+
+            <nav class="relative">
+                <button onclick="toggleMenu()" class="text-xl sm:text-2xl font-semibold text-black font-rubik">MENU
+                    &#9776;</button>
+                <div id="dropdown"
+                    class="hidden absolute right-0 mt-2 w-48 bg-whiteContainer rounded-lg shadow-lg z-10">
+                    <ul class="py-2">
+                        <li><a href="../App/CreaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Crea
+                                El teu Habitatge</a></li>
+                        <li><a href="../App/EditUser.html" class="block px-4 py-2 text-black hover:bg-green">Edita el
+                                Teu Perfil</a></li>
+                        <li><a href="../App/EditaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Edita
+                                El Teu Habitatge</a></li>
+                        <li><a href="../App/ElsMeusHabitatges.html"
+                                class="block px-4 py-2 text-black hover:bg-green">Els meus habitatges</a></li>
+                        <li><a href="../App/notificaUsuari.html"
+                                class="block px-4 py-2 text-black hover:bg-green">Notificacions</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="absolute left-0 bottom-0 w-full border-dashed"></div>
+    </header>
+    <script>
+        function toggleMenu() {
+            const dropdown = document.getElementById("dropdown");
+            dropdown.classList.toggle("hidden");
+        }
+
+        // Cerrar el menú si se hace clic fuera de él
+        window.onclick = function (event) {
+            if (!event.target.matches('.text-xl')) {
+                const dropdowns = document.getElementsByClassName("absolute");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (!openDropdown.classList.contains('hidden')) {
+                        openDropdown.classList.add('hidden');
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <div
+        class="container mx-auto mt-10 mb-10 p-4 bg-whiteBackground rounded-xl sm:max-w-4xl max-w-80 border border-BlackBackground lg:bg-transparent lg:border-transparent lg:grid lg:grid-cols-3 lg:gap-4">
+        <div class="lg:col-span-2 bg-whiteContainer rounded-lg p-4 lg:border border-BlackBackground">
+            <div class="w-full h-64 mb-4">
+                <img src="./img/image23.png" alt="Imatge Habitatge"
+                    class="w-full h-full object-cover rounded-xl border border-BlackBackground">
+            </div>
+            <div class="mx-6 font-roboto">
+                <p class="text-xl">Pis Holliweb</p>
+                <div class="flex flex-col md:flex-row mt-2">
+                    <div class="flex flex-col md:w-1/2">
+                        <p class="font-roboto_Medium">Informació Habitatge:</p>
+                        <p>Ubicació: Carrer Collsecabra 22</p>
+                        <p>Propietari: Miquel López</p>
+                        <p>Tasques pendents:</p>
+                        <ul class="list-disc ml-4">
+                            <li>Pintar Cuina</li>
+                            <li>Millorar pati</li>
+                        </ul>
+                        <p class="mt-2">Lloguer mensual: 250€</p>
+                    </div>
+                    <div class="flex flex-col md:w-1/2 mt-4 md:mt-0">
+                        <p class="text-darkGreen font-roboto">Condicions:</p>
+                        <div class="flex items-center mt-2 space-x-4">
+                            <img src="../App/img/sin-mascotas.png" class="w-10 h-10" alt="No pets">
+                            <img src="../App/img/no-wifi.png" class="w-10 h-10" alt="No Wi-Fi">
+                            <img src="../App/img/senal-de-no-fumar.png" class="w-10 h-10" alt="No smoking">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end space-x-4  mt-4">
+                <a href="../App/PropostaHabitatge.html"
+                    class="px-6 py-2 bg-darkGreen text-white rounded-md hover:bg-darkGreen">
+                    Formar-ne part
+                </a>
+
+            </div>
+        </div>
+        <div class="lg:col-span-1 flex flex-col gap-4 mt-4 lg:mt-0">
+            <div class="bg-whiteContainer rounded-lg p-4 lg:border border-BlackBackground">
+                <p class="text-darkGreen text-xl text-center mb-2 font-rosarivo">Convivents</p>
+                <div class="flex flex-row justify-center gap-4 font-roboto">
+                    <div class="flex flex-col bg-whiteContainer rounded-md justify-center items-center pt-4 ">
+                        <div class="w-28 h-40">
+                            <img src="./img/imagemiquel.png" alt="Miquel López"
+                                class="w-full h-full object-cover border rounded-md">
+                        </div>
+                        <p class="mt-2 font-roboto_Medium">Miquel López</p>
+                    </div>
+                    <div class="flex flex-col bg-whiteContainer rounded-md justify-center items-center pt-4 font-roboto">
+                        <div class="w-28 h-40">
+                            <img src="./img/fotoUsuari.png" alt="Roger Surroca"
+                                class="w-full h-full object-cover border rounded-md">
+                        </div>
+                        <p class="mt-2 font-roboto_Medium">Roger Surroca</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-whiteContainer rounded-lg p-4 lg:border border-BlackBackground">
+                <p class="font-roboto_Medium">Descripció:</p>
+                <p class="font-roboto">El pis està al carrer Collsecabra 22, perfecte per a un estudiant. Té una cuina funcional però
+                    caldria
+                    pintar-la per modernitzar l'espai. Disposa d'un petit pati interior amb potencial, però necessita
+                    millores, com renovar el terra i afegir més plantes per fer-lo més acollidor. El pis és lluminós i
+                    amb
+                    una mica de reforma pot ser molt còmode. Ideal per algú que busqui tranquil·litat i proximitat als
+                    serveis.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

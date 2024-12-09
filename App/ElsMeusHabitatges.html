@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sutdy House</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-cover bg-center " style="background-image: url('img/ProjecteUF1StudyHouse.png');">
+  <header class="bg-green py-2 relative">
+    <div href="../App/MainMenu.html" class="w-full px-1 flex justify-between items-center">
+      <div onclick="window.location.href='../App/MainMenu.html'" class="flex items-center">
+        <!-- Logo -->
+        <div class="mr-2">
+          <img src="./img/house-plants.png" alt="Sutdy House Logo" class="hidden sm:block h-12 w-12 sm:h-14 sm:w-14">
+        </div>
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-black font-rubik">SUTDY HOUSE</h1>
+      </div>
+
+      <nav class="relative">
+        <button onclick="toggleMenu()" class="text-xl sm:text-2xl font-semibold text-black font-rubik">MENU &#9776;</button>
+        <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-whiteContainer rounded-lg shadow-lg z-10">
+          <ul class="py-2">
+            <li><a href="../App/CreaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Crea El teu Habitatge</a></li>
+            <li><a href="../App/EditUser.html" class="block px-4 py-2 text-black hover:bg-green">Edita el Teu Perfil</a></li>
+            <li><a href="../App/EditaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Edita El Teu Habitatge</a></li>
+            <li><a href="../App/ElsMeusHabitatges.html" class="block px-4 py-2 text-black hover:bg-green">Els meus habitatges</a></li>
+            <li><a href="../App/notificaUsuari.html" class="block px-4 py-2 text-black hover:bg-green">Notificacions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="absolute left-0 bottom-0 w-full border-dashed"></div>
+  </header>
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
+    
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function(event) {
+      if (!event.target.matches('.text-xl')) {
+        const dropdowns = document.getElementsByClassName("absolute");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (!openDropdown.classList.contains('hidden')) {
+            openDropdown.classList.add('hidden');
+          }
+        }
+      }
+    }
+  </script>
+
+<div class="  container mx-auto mt-10 mb-10 p-4 rounded-xl sm:max-w-4xl max-w-80  space-y-6 sm:p-6 ">
+  <div class="bg-whiteContainer rounded-2xl shadow-md p-6 flex flex-col sm:flex-row justify-between items-center font-roboto">
+    <div class="flex flex-col sm:flex-row items-center">
+      <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden mr-6">
+        <img src="../App/img/img_blog.png" alt="Property Image" class="object-cover w-full h-full">
+      </div>
+      <div class="mt-4 sm:mt-0 font-roboto">
+        <p><strong>Ubicació:</strong> Carrer Collsecabra 22</p>
+        <p><strong>Propietari:</strong> Miquel López</p>
+        <p><strong>Tasques pendents:</strong></p>
+        <ul class="list-disc list-inside">
+          <li>Pintar Cuina</li>
+          <li>Millorar pati</li>
+        </ul>
+        <p><strong>Lloguer mensual:</strong> 250€</p>
+      </div>
+    </div>
+    <div class="text-center mt-4 sm:mt-0">
+      <p class="mb-2">Peticions pendents 4</p>
+      <a href="./notificaUsuari.html" class="bg-green text-white px-4 py-2 rounded hover:bg-darkGreen">Veure Peticions</a>
+    </div>
+  </div>
+
+  <div class="bg-whiteContainer rounded-2xl shadow-md p-6 flex flex-col sm:flex-row justify-between items-center font-roboto">
+    <div class="flex flex-col sm:flex-row items-center">
+      <!-- Image Placeholder -->
+      <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden mr-6">
+        <img src="../App/img/image23.png" alt="Property Image" class="object-cover w-full h-full">
+      </div>
+      <div class="mt-4 sm:mt-0">
+        <p><strong>Ubicació:</strong> Carrer Montseny 12</p>
+        <p><strong>Propietari:</strong> Miquel López</p>
+        <p><strong>Tasques pendents:</strong></p>
+        <ul class="list-disc list-inside">
+          <li>Pintar Habitació principal</li>
+          <li>Canviar la porta del garatge</li>
+        </ul>
+        <p><strong>Lloguer mensual:</strong> 300€</p>
+      </div>
+    </div>
+    <div class="text-center mt-4 sm:mt-0">
+      <p class="mb-2">Peticions pendents 4</p>
+      <a href="./notificaUsuari.html" class="bg-green text-white px-4 py-2 rounded hover:bg-darkGreen">Veure Peticions</a>
+    </div>
+  </div>
+
+  <div class="bg-whiteContainer rounded-2xl shadow-md p-6 flex flex-col sm:flex-row justify-between items-center font-roboto">
+    <div class="flex flex-col sm:flex-row sm:mx-4 items-center ">
+      <!-- Image Placeholder -->
+      <div class="w-full sm:w-32 h-32 rounded-2xl overflow-hidden mr-6">
+        <img src="../App/img/510-ceramica-o-madera-cual-es-la-mejor-eleccion-para-pisos-197-big 1.png" alt="Property Image" class="object-cover w-full h-full">
+      </div>
+
+      <div>
+        <p><strong>Ubicació:</strong> Carrer del Bosc 8</p>
+        <p><strong>Propietari:</strong> Miquel López</p>
+        <p><strong>Tasques pendents:</strong></p>
+        <ul class="list-disc list-inside">
+          <li>Instal·lar aire condicionat</li>
+          <li>Reparar canonades</li>
+        </ul>
+        <p><strong>Lloguer mensual:</strong> 275€</p>
+      </div>
+    </div>
+    <!-- No Requests -->
+    <div class="text-center font-roboto_Medium">
+      <p>No hi han peticions pendents -</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

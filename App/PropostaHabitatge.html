@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sutdy House</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-cover bg-center " style="background-image: url('img/ProjecteUF1StudyHouse.png');">
+  <header class="bg-green py-2 relative">
+    <div href="../App/MainMenu.html" class="w-full px-1 flex justify-between items-center">
+      <div onclick="window.location.href='../App/MainMenu.html'" class="flex items-center">
+        <!-- Logo -->
+        <div class="mr-2">
+          <img src="./img/house-plants.png" alt="Sutdy House Logo" class="hidden sm:block h-12 w-12 sm:h-14 sm:w-14">
+        </div>
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-black font-rubik">SUTDY HOUSE</h1>
+      </div>
+
+      <nav class="relative">
+        <button onclick="toggleMenu()" class="text-xl sm:text-2xl font-semibold text-black font-rubik">MENU &#9776;</button>
+        <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-whiteContainer rounded-lg shadow-lg z-10">
+          <ul class="py-2">
+            <li><a href="../App/CreaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Crea El teu Habitatge</a></li>
+            <li><a href="../App/EditUser.html" class="block px-4 py-2 text-black hover:bg-green">Edita el Teu Perfil</a></li>
+            <li><a href="../App/EditaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Edita El Teu Habitatge</a></li>
+            <li><a href="../App/ElsMeusHabitatges.html" class="block px-4 py-2 text-black hover:bg-green">Els meus habitatges</a></li>
+            <li><a href="../App/notificaUsuari.html" class="block px-4 py-2 text-black hover:bg-green">Notificacions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="absolute left-0 bottom-0 w-full border-dashed"></div>
+  </header>
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
+    
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function(event) {
+      if (!event.target.matches('.text-xl')) {
+        const dropdowns = document.getElementsByClassName("absolute");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (!openDropdown.classList.contains('hidden')) {
+            openDropdown.classList.add('hidden');
+          }
+        }
+      }
+    }
+  </script>
+
+<div class="flex flex-row justify-center md:flex-row  md:mt-20 my-28">
+    <div class="p-5  bg-whiteContainer rounded-lg border h-[600px] md:h-auto">
+        <p class="text-center mb-9 md:mb-4 font-rosarivo">FORMULARI HABITATGE</p>
+        <p class="font-roboto">Perquè t'interessa?</p>
+        <textarea class="border rounded-lg w-full mb-9 md:mb-auto" name="cmentari" id="comentari" rows="6" ></textarea>    
+        <p class="font-roboto">Quina seria la teva previsió d’estança?</p>
+        <input class="border rounded-lg mb-6" type="text">
+        <div class="flex flex-col md:flex-row">
+            <div class="border border-green w-full mb-6 md:w-1/3 p-2 rounded-lg ">
+                <p class="font-roboto">Com sé si m’han acceptat?
+                    Rebràs una notificació quan el propietari
+                    hagi acceptat o denegat la proposta.</p>
+            </div>
+            <div class="md:w-2/3 flex flex-row items-center justify-end md:justify-center font-roboto">
+              <a href="../App/SeleccionaHabitatge.html" class="bg-grey hover:bg-darkGrey border rounded-lg px-3 py-1 mr-3">
+                  Cancel·lar
+              </a>
+              <a href="../App/SeleccionaHabitatge.html" class="bg-green hover:bg-darkGreen border rounded-lg px-3 py-1">
+                  Enviar Solicitud
+              </a>
+          </div>
+          
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

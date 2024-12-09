@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Plantilla Perfil</title>
+</head>
+
+
+<body class="bg-cover bg-center " style="background-image: url('img/ProjecteUF1StudyHouse.png');">
+
+  <header class="bg-green py-2 relative">
+    <div href="../App/MainMenu.html" class="w-full px-1 flex justify-between items-center">
+      <div onclick="window.location.href='../App/MainMenu.html'" class="flex items-center">
+        <!-- Logo -->
+        <div class="mr-2">
+          <img src="./img/house-plants.png" alt="Sutdy House Logo" class="hidden sm:block h-12 w-12 sm:h-14 sm:w-14">
+        </div>
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-black font-rubik">SUTDY HOUSE</h1>
+      </div>
+
+      <nav class="relative">
+        <button onclick="toggleMenu()" class="text-xl sm:text-2xl font-semibold text-black font-rubik">MENU
+          &#9776;</button>
+        <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-whiteContainer rounded-lg shadow-lg z-10">
+          <ul class="py-2">
+            <li><a href="../App/CreaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Crea El teu
+                Habitatge</a></li>
+            <li><a href="../App/EditUser.html" class="block px-4 py-2 text-black hover:bg-green">Edita el Teu Perfil</a>
+            </li>
+            <li><a href="../App/EditaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Edita El Teu
+                Habitatge</a></li>
+            <li><a href="../App/ElsMeusHabitatges.html" class="block px-4 py-2 text-black hover:bg-green">Els meus
+                habitatges</a></li>
+            <li><a href="../App/notificaUsuari.html" class="block px-4 py-2 text-black hover:bg-green">Notificacions</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="absolute left-0 bottom-0 w-full border-dashed"></div>
+  </header>
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function (event) {
+      if (!event.target.matches('.text-xl')) {
+        const dropdowns = document.getElementsByClassName("absolute");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (!openDropdown.classList.contains('hidden')) {
+            openDropdown.classList.add('hidden');
+          }
+        }
+      }
+    }
+  </script>
+
+
+  <div
+    class="container mx-auto mt-10  p-4 bg-whiteBackground rounded-xl shadow-lg sm:max-w-4xl max-w-80 border border-BlackBackground font-roboto">
+    <div class="text-center font-rosarivo">Notificacions</div>
+
+    <a href="../App/PeticioHabitatge.html" class="flex border border-BlackBackground cursor-pointer">
+      <div class="w-5 h-30 bg-blueBackground"></div>
+      <div class="flex-grow p-4">
+        <p>Sol·licitud de convivència</p>
+        <p>Roger Surroca ha sol·licitat conviure en el pis del C/Nicolas N4</p>
+      </div>
+    </a>
+    <a href="../App/PeticioHabitatge.html" class="flex border border-BlackBackground">
+      <div class="w-5 h-30 bg-blueBackground"></div>
+      <div class="flex-grow p-4 ">
+        <p>Sol·licitud de convivència</p>
+        <p>Antonia Font ha sol·licitat conviure en el pis del C/Nicolas N4</p>
+      </div>
+    </a>
+    <div class="flex border border-BlackBackground">
+      <div class="w-5 h-30 bg-redBackground"></div>
+      <div class="flex-grow p-4 ">
+        <p>Sol·licitud d'aprovació</p>
+        <p>El Propietari del pis al C/Nicolas N4 ha denegat la sol·licitud</p>
+      </div>
+    </div>
+    <div class="flex border border-BlackBackground">
+      <div class="w-5 h-30 bg-green"></div>
+      <div class="flex-grow p-4 ">
+        <p>Sol·licitud d'aprovació</p>
+        <p>El Propietari del pis al C/Nicolas N4 ha acceptat la sol·licitud. </p>
+      </div>
+    </div>
+    <div class="flex justify-end space-x-4  mt-4">
+      <a href="./MainMenu.html" class="px-6 py-2 bg-darkGreen text-white rounded-md hover:bg-darkGreen">Borra
+        notificacions</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sutdy House</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-cover bg-center " style="background-image: url('img/ProjecteUF1StudyHouse.png');">
+  <header class="bg-green py-2 relative">
+    <div href="../App/MainMenu.html" class="w-full px-1 flex justify-between items-center">
+      <div onclick="window.location.href='../App/MainMenu.html'" class="flex items-center">
+        <!-- Logo -->
+        <div class="mr-2">
+          <img src="./img/house-plants.png" alt="Sutdy House Logo" class="hidden sm:block h-12 w-12 sm:h-14 sm:w-14">
+        </div>
+        <!-- Title -->
+        <h1 class="text-3xl sm:text-4xl font-bold text-black font-rubik">SUTDY HOUSE</h1>
+      </div>
+
+      <nav class="relative">
+        <button onclick="toggleMenu()" class="text-xl sm:text-2xl font-semibold text-black font-rubik">MENU &#9776;</button>
+        <div id="dropdown" class="hidden absolute right-0 mt-2 w-48 bg-whiteContainer rounded-lg shadow-lg z-10">
+          <ul class="py-2">
+            <li><a href="../App/CreaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Crea El teu Habitatge</a></li>
+            <li><a href="../App/EditUser.html" class="block px-4 py-2 text-black hover:bg-green">Edita el Teu Perfil</a></li>
+            <li><a href="../App/EditaHabitatge.html" class="block px-4 py-2 text-black hover:bg-green">Edita El Teu Habitatge</a></li>
+            <li><a href="../App/ElsMeusHabitatges.html" class="block px-4 py-2 text-black hover:bg-green">Els meus habitatges</a></li>
+            <li><a href="../App/notificaUsuari.html" class="block px-4 py-2 text-black hover:bg-green">Notificacions</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="absolute left-0 bottom-0 w-full border-dashed"></div>
+  </header>
+  <script>
+    function toggleMenu() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
+    
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function(event) {
+      if (!event.target.matches('.text-xl')) {
+        const dropdowns = document.getElementsByClassName("absolute");
+        for (let i = 0; i < dropdowns.length; i++) {
+          const openDropdown = dropdowns[i];
+          if (!openDropdown.classList.contains('hidden')) {
+            openDropdown.classList.add('hidden');
+          }
+        }
+      }
+    }
+  </script>
+
+  <div class="flex flex-col lg:flex-row mt-5 font-roboto">
+    <div class="flex flex-col lg:w-1/3">
+        <div class="bg-whiteContainer flex flex-col items-center mb-3 mx-20 py-6 rounded-lg border">
+            <div>
+                <img src="./img/fotoUsuari.png" alt="Imatge Usuari">
+            </div>
+            <p class="text-xl font-rosarivo">Roger Surroca</p>
+        </div>
+    </div>
+    <div class="flex flex-col bg-whiteContainer lg:w-2/3 mx-3 lg:mr-4 rounded-lg border">
+        <div class="m-5">
+            <p><strong>Nom</strong>: Roger Surroca</p>
+            <p><strong>Edat</strong>: 20</p>
+            <p><strong>Adjectius</strong>: Guapo, Llest, Sincer.</p>
+            <p><strong>Contacte amb mi:</strong></p>
+            <ul>
+                <li>roger@gmail.com</li>
+                <li>698 234 312</li>
+            </ul>
+            <p class="mt-4 "><strong>Descripció:</strong></p>
+            <p>Sóc en Roger Surroca, una persona tranquil·la i observadora, amb un gran sentit de l'humor. M'agrada estar envoltat de gent però també valoro els moments de solitud. Tinc cabells castanys, ulls avellana i vesteixo de manera senzilla però còmoda. M'encanten la natura i la lectura, sempre busco aprendre coses noves. La lleialtat i l'empatia són valors molt importants per a mi.</p>
+            <p class="mt-4"><strong>Petició</strong></p>
+            <p>Desitjaria sol·licitar permís per realitzar millores al pis del carrer Collsecabra 22. Concretament, vull pintar la cuina i millorar el pati interior, renovant el terra i afegint plantes per fer-lo més acollidor. Aquestes reformes milloraran la funcionalitat i l'estètica de l'espai sense afectar l'estructura de l'immoble.</p>
+            <p>Gràcies per la vostra atenció.</p>
+            <div class="flex flex-row items-center justify-end  font-roboto">
+              <a href="../App/notificaUsuari.html" class="bg-grey hover:bg-darkGrey border rounded-lg px-3 py-1 mr-3">
+                  Denegar
+              </a>
+              <a href="../App/notificaUsuari.html" class="bg-green hover:bg-darkGreen border rounded-lg px-3 py-1">
+                  Acceptar Solicitud
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
